@@ -565,7 +565,7 @@ theorem search_spec (a : Nat) (as : List Nat) :
 
 
 
-theorem bin_search_interval_spec (a : Nat) (as : List Nat) (h_sorted : sorted as) :
+theorem bin_search_spec (a : Nat) (as : List Nat) (h_sorted : sorted as) :
   bin_search a as = true ↔ ∃ i, _root_.get as i = some a := by
   rw [bin_search_correct]
   . apply search_spec
